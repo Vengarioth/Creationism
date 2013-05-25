@@ -1,8 +1,9 @@
 var express = require('express')
 	, http = require('http')
 	, path = require('path');
-
 var app = express();
+
+require('mootools');
 
 app.configure(function () {
 	app.set('port', process.env.PORT || 3000);
@@ -23,3 +24,8 @@ http.createServer(app).listen(app.get('port'), function ()
 {
 	console.log("server listening on port " + app.get('port'));
 });
+
+//############### Server ###############
+
+var LobbyServer = require('./LobbyServer/app.js');
+
