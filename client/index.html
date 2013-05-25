@@ -26,46 +26,48 @@
         <h1>{{translate('Title')}} <span class="small">{{translate('Subtitle')}}</span></h1>
     </header>
 
-    <div id="PlayerChoices">
+    <div id="Content">
+        <div id="PlayerChoices">
 
-        <div>
-            <p>Nahrungsbeschaffung</p>
-
-            <ul class="">
-                <li class="">
-                    Landwirtschaft
-                </li>
-                <li class="">
-                    Sammler
-                </li>
-                <li class="">
-                    Jänger
-                </li>
-            </ul>
-        </div>
-
-    </div>
-
-    <div id="PlanetVisualization">
-        <canvas id="Viewport"></canvas>
-    </div>
-
-    <div id="PlanetStatus">
-
-        <div>
-            <p>Bevölkerung</p>
             <div>
-                Wenig [______________] Viel
+                <p>Nahrungsbeschaffung</p>
+
+                <ul class="">
+                    <li class="">
+                        Landwirtschaft
+                    </li>
+                    <li class="">
+                        Sammler
+                    </li>
+                    <li class="">
+                        Jänger
+                    </li>
+                </ul>
             </div>
+
         </div>
 
-        <div>
-            <p>Nahrungsbestand</p>
+        <div id="PlanetStatus">
+
             <div>
-                Wenig [______________] Viel
+                <p>Bevölkerung</p>
+                <div>
+                    Wenig [______>>______] Viel
+                </div>
             </div>
+
+            <div>
+                <p>Nahrungsbestand</p>
+                <div>
+                    Wenig [_____<<<______] Viel
+                </div>
+            </div>
+
         </div>
 
+        <div id="PlanetVisualization">
+            <canvas id="Viewport"></canvas>
+        </div>
     </div>
 
 </body>
