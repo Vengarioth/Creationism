@@ -1,4 +1,6 @@
 <div>
-    {{translate('enterUsername')}}
-    <input>
+    <legend>{{translate('Game Setup')}}</legend>
+    <label>{{translate('enterUsername')}}</label>
+    <input type="text" placeholder="{{translate('Username')}}..." ng-model="model.name">
+    <button ng-Click="submit()">{{translate('Play')}}</button>
 </div>
