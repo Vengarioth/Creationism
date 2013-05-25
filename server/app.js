@@ -27,5 +27,11 @@ http.createServer(app).listen(app.get('port'), function ()
 
 //############### Server ###############
 
+var io = require('socket.io').listen(3001);
+
 var LobbyServer = require('./LobbyServer/app.js');
+var lobbyServer = new LobbyServer();
+io.sockets.on('connection', function (socket) {
+    lobbyServer.onConnect(socket);
+});
 

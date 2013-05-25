@@ -9,17 +9,7 @@ module.exports = new Class({
     },
 
     onConnect: function(socket) {
-        socket.emit('namePleaseEvent', {});
-
-        socket.on('namePleaseEvent', function() {
-            //ab hier user erstellen
-
-            socket.on('selectGameEvent', function() {
-
-                //user ins spiel schicken
-
-            });
-        });
+        
     }
 
 

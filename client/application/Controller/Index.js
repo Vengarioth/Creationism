@@ -1,6 +1,6 @@
 Creationism.Controller.Index = new Class({
 
-    initialize: function(scope, translation) {
+    initialize: function(scope, translation, server) {
         scope['language'] = 'en_GB';
 
         translation.getTranslator(scope['language'], function(translator) {
@@ -18,4 +18,4 @@ Creationism.Controller.Index = new Class({
 
 });
 
-Creationism.Controller.Index.$inject = ['$scope', 'Translation'];
+Creationism.Controller.Index.$inject = ['$scope', 'Translation', 'Server'];
