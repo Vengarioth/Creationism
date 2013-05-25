@@ -24,6 +24,8 @@
 #Viewport {
     width: 800px;
     height: 400px;
+
+    background-image: url('../graphics/map.png');
 }
 
 #Content {
