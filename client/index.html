@@ -3,6 +3,10 @@
 <head>
     <title>Creationism</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
     <script src="library/jquery/jquery.js"></script>
     <script src="library/angular/angular.js"></script>
     <script src="library/mootools/mootools-core-1.4.5.js"></script>
@@ -18,7 +22,7 @@
 
     <script src="application/app.js"></script>
 
-    <link href="style/style.css" rel="stylesheet" type="text/css">
+    <link href="style/bootstrap.css" rel="stylesheet" type="text/css">
 
 </head>
 <body ng-app="Creationism" ng-controller="Creationism.Controller.Index">
@@ -28,6 +32,7 @@
     </header>
 
     <div id="Content">
+        <h1>Hello, world!</h1>
         <div id="PlayerChoices">
 
             <div>
@@ -52,8 +57,8 @@
 
             <div>
                 <p>Bevölkerung</p>
-                <div>
-                    Wenig [______>>______] Viel
+                <div class="progress">
+                    <div class="bar" style="width: 60%;"></div>
                 </div>
             </div>
 
