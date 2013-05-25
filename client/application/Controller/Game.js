@@ -2,14 +2,14 @@ Creationism.Controller.Game = new Class({
 
     initialize: function(scope, server) {
 
-        scope.setCoreElement = function(value) {
+        scope.setChoice = function(element, value) {
             var data = {
-                type: 'coreElement',
+                type: element,
                 value: value
             };
 
             console.log(data);
-            server.send('inGame_setChoices', data);
+            server.send('inGame_setChoice', data);
         };
 
     }

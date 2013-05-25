@@ -8,50 +8,50 @@
             <div>
                 <p><span class="large">{{translate('Core Element')}}</span></p>
                 <div class="btn-group">
-                    <button class="btn" ng-Click="setCoreElement(0)">{{translate('Water')}}</button>
-                    <button class="btn" ng-Click="setCoreElement(1)">{{translate('Air')}}</button>
-                    <button class="btn" ng-Click="setCoreElement(2)">{{translate('Earth')}}</button>
+                    <button class="btn" ng-Click="setChoice('coreElement',0)">{{translate('Water')}}</button>
+                    <button class="btn" ng-Click="setChoice('coreElement',1)">{{translate('Air')}}</button>
+                    <button class="btn" ng-Click="setChoice('coreElement',2)">{{translate('Earth')}}</button>
                 </div>
             </div>
 
             <div>
                 <p><span class="large">{{translate('Alimentation')}}</span></p>
                 <div class="btn-group">
-                    <button class="btn">{{translate('Hunting')}}</button>
-                    <button class="btn">{{translate('Gathering')}}</button>
-                    <button class="btn">{{translate('Farming')}}</button>
+                    <button class="btn" ng-Click="setChoice('Alimentation',0)">{{translate('Hunting')}}</button>
+                    <button class="btn" ng-Click="setChoice('Alimentation',1)">{{translate('Gathering')}}</button>
+                    <button class="btn" ng-Click="setChoice('Alimentation',2)">{{translate('Farming')}}</button>
                 </div>
             </div>
             <div>
                 <p><span class="large">{{translate('Governance')}}</span></p>
                 <div class="btn-group">
-                    <button class="btn">{{translate('Democracy')}}</button>
-                    <button class="btn">{{translate('Dictatorship')}}</button>
-                    <button class="btn">{{translate('Technocracy')}}</button>
+                    <button class="btn" ng-Click="setChoice('Governance',0)">{{translate('Democracy')}}</button>
+                    <button class="btn" ng-Click="setChoice('Governance',1)">{{translate('Dictatorship')}}</button>
+                    <button class="btn" ng-Click="setChoice('Governance',2)">{{translate('Technocracy')}}</button>
                 </div>
             </div>
             <div>
                 <p><span class="large">{{translate('Religion')}}</span></p>
                 <div class="btn-group">
-                    <button class="btn">{{translate('Holy Animals')}}</button>
-                    <button class="btn">{{translate('Forbidden Knowledge')}}</button>
-                    <button class="btn">{{translate('Eye for an Eye')}}</button>
+                    <button class="btn" ng-Click="setChoice('Religion',0)">{{translate('Holy Animals')}}</button>
+                    <button class="btn" ng-Click="setChoice('Religion',1)">{{translate('Forbidden Knowledge')}}</button>
+                    <button class="btn" ng-Click="setChoice('Religion',2)">{{translate('Eye for an Eye')}}</button>
                 </div>
             </div>
             <div>
                 <p><span class="large">{{translate('Ideology')}}</span></p>
                 <div class="btn-group">
-                    <button class="btn">{{translate('Free Love')}}</button>
-                    <button class="btn">{{translate('Communism')}}</button>
-                    <button class="btn">{{translate('Ecology')}}</button>
+                    <button class="btn" ng-Click="setChoice('Ideology',0)">{{translate('Free Love')}}</button>
+                    <button class="btn" ng-Click="setChoice('Ideology',1)">{{translate('Communism')}}</button>
+                    <button class="btn" ng-Click="setChoice('Ideology',2)">{{translate('Ecology')}}</button>
                 </div>
             </div>
             <div>
                 <p><span class="large">{{translate('Energy')}}</span></p>
                 <div class="btn-group">
-                    <button class="btn">{{translate('Renewable')}}</button>
-                    <button class="btn">{{translate('Fossil')}}</button>
-                    <button class="btn">{{translate('Nuclear')}}</button>
+                    <button class="btn" ng-Click="setChoice('Energy',0)">{{translate('Renewable')}}</button>
+                    <button class="btn" ng-Click="setChoice('Energy',1)">{{translate('Fossil')}}</button>
+                    <button class="btn" ng-Click="setChoice('Energy',2)">{{translate('Nuclear')}}</button>
                 </div>
             </div>
         </div>
