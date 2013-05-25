@@ -31,50 +31,7 @@
         <h1>{{translate('Title')}} <span class="small">{{translate('Subtitle')}}</span></h1>
     </header>
 
-    <div id="Content">
-        <h1>Hello, world!</h1>
-        <div id="PlayerChoices">
-
-            <div>
-                <p>Nahrungsbeschaffung</p>
-
-                <ul class="">
-                    <li class="">
-                        Landwirtschaft
-                    </li>
-                    <li class="">
-                        Sammler
-                    </li>
-                    <li class="">
-                        Jänger
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-
-        <div id="PlanetStatus">
-
-            <div>
-                <p>Bevölkerung</p>
-                <div class="progress">
-                    <div class="bar" style="width: 60%;"></div>
-                </div>
-            </div>
-
-            <div>
-                <p>Nahrungsbestand</p>
-                <div>
-                    Wenig [_____<<<______] Viel
-                </div>
-            </div>
-
-        </div>
-
-        <div id="PlanetVisualization">
-            <canvas id="Viewport"></canvas>
-        </div>
-    </div>
+    <ng-view></ng-view>
 
 </body>
 </html>

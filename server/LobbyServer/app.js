@@ -18,19 +18,32 @@ module.exports = new Class({
 
             var that = this;
 
-            user.socket.on('joinLobby', function(data) {
+            user.name = user.id;
 
-            });
+            new GameServer([user]);
 
-            user.socket.on('openLobby', function(data) {
-                that.openLobby(user);
+            /**
+            user.socket.on('setName', function(data) {
+
+                user.name = data.name;
+
+                user.socket.on('joinLobby', function(data) {
+                    that.lobbys[data.lobby].addUser(user);
+                });
+
+                user.socket.on('openLobby', function(data) {
+                    var lobby = that.openLobby(user);
+                });
             });
+             */
         }
     },
 
     openLobby: function(hostUser) {
         var lobby = new Lobby(this, hostUser);
         this.lobbys[hostUser.id] = lobby;
+
+        return lobby;
     },
 
     openGame: function(lobby) {

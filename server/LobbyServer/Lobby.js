@@ -7,6 +7,7 @@ module.exports = new Class({
     initialize: function(lobbyServer, hostUser) {
         this.lobbyServer = lobbyServer;
         this.host = hostUser;
+        this.addUser(hostUser);
 
         var that = this;
 
@@ -15,12 +16,29 @@ module.exports = new Class({
         });
     },
 
-    addUser: function() {
+    addUser: function(user) {
+        this.user[user.id] = user;
+
+        user.socket.emit('goToLobby', this.getInfo());
+    },
+
+    getInfo: function() {
+        var info = {
+            user: {},
+            host: this.host.id
+        };
+
+        for(var i in this.user) {
+            info.user[i] = {
+                id: this.user[i].id,
+                name: this.user[i].name
+            }
+        }
 
     },
 
-    removeUser: function() {
-
+    removeUser: function(user) {
+        delete this.user[user.id];
     },
 
     start: function() {
