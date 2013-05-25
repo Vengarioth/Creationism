@@ -6,9 +6,9 @@ Creationism.App.config([
             templateUrl: 'application/template/main.html',
             controller: Creationism.Controller.Main
         });
-        $routeProvider.when('/moonlight', {
-            templateUrl: 'application/template/moonlight.html',
-            controller: Creationism.Controller.Moonlight
+        $routeProvider.when('/game', {
+            templateUrl: 'application/template/game.html',
+            controller: Creationism.Controller.Game
         });
 	}
 ]);
