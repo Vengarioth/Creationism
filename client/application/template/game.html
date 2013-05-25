@@ -17,9 +17,9 @@
             <div>
                 <p><span class="large">{{translate('Alimentation')}}</span></p>
                 <div class="btn-group">
-                    <button class="btn" ng-Click="setChoice('Alimentation',0)">{{translate('Hunting')}}</button>
-                    <button class="btn" ng-Click="setChoice('Alimentation',1)">{{translate('Gathering')}}</button>
-                    <button class="btn" ng-Click="setChoice('Alimentation',2)">{{translate('Farming')}}</button>
+                    <button class="btn" ng-Click="planet.setChoice('Alimentation','hunt')">{{translate('Hunting')}}</button>
+                    <button class="btn" ng-Click="planet.setChoice('Alimentation','gather')">{{translate('Gathering')}}</button>
+                    <button class="btn" ng-Click="planet.setChoice('Alimentation','farm')">{{translate('Farming')}}</button>
                 </div>
             </div>
             <div>
@@ -69,19 +69,29 @@
             <p>
 			<img src = "../../graphics/icon_pop.png"  width="32" height="32">
 			<span class="large">{{translate('Population')}}</span></p>
+            <p>{{presentValue(planet.population)}} {{translate('M')}}</p>
         </div>
 
         <div>
             <p>
 			<img src = "../../graphics/icon_food.png"  width="32" height="32">
 			<span class="large">{{translate('Food')}}</span></p>
+            <p>{{presentValue(planet.food)}} {{translate('M')}}</p>
         </div>
 
         <div>
             <img src = "../../graphics/icon_animals.png"  width="32" height="32">
-			<span class="large">{{translate('Animals')}}</span>           
-			<div class="progress">
-                <div class="bar" style="width: 60%;"></div>
+            <span class="large">{{translate('Animals')}}</span>
+            <div class="progress">
+                <div class="bar" style="width: {{planet.animals}}%;"></div>
+            </div>
+        </div>
+
+        <div>
+            <img src = "../../graphics/icon_animals.png"  width="32" height="32">
+            <span class="large">{{translate('Nature')}}</span>
+            <div class="progress">
+                <div class="bar" style="width: {{planet.nature}}%;"></div>
             </div>
         </div>
 
@@ -105,7 +115,7 @@
             <img src = "../../graphics/icon_tech.png"  width="32" height="32">
             <span class="large">{{translate('Technology')}}</span>
 			<div class="progress">
-                <div class="bar" style="width: 60%;"></div>
+                <div class="bar" style="width: {{planet.technology}};"></div>
             </div>
         </div>
 
@@ -121,7 +131,7 @@
 			<img src = "../../graphics/icon_pollution.png"  width="32" height="32">
             <span class="large">{{translate('Pollution')}}</span>
             <div class="progress">
-                <div class="bar" style="width: 60%;"></div>
+                <div class="bar" style="width: {{planet.pollution}}%;"></div>
             </div>
         </div>
 

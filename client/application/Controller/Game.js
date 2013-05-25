@@ -1,19 +1,25 @@
 Creationism.Controller.Game = new Class({
 
-    initialize: function(scope, server) {
+    initialize: function(scope, planet) {
 
         scope.setChoice = function(element, value) {
-            var data = {
-                type: element,
-                value: value
-            };
 
-            console.log(data);
-            server.send('inGame_setChoice', data);
         };
+
+        scope.presentValue = function(value) {
+            return Math.floor(value);
+        };
+
+        scope.planet = planet.getPlanet();
+
+        planet.start();
+
+        setInterval(function() {
+            scope.$apply();
+        }, 300)
 
     }
 
 });
 
-Creationism.Controller.Game.$inject = ['$scope', 'Server'];
+Creationism.Controller.Game.$inject = ['$scope', 'Planet'];
