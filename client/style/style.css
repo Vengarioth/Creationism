@@ -11,8 +11,8 @@
 #PlanetVisualization {
     display: block;
     border: 1px solid blue;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 400px;
+    margin-right: 200px;
 }
 
 #PlanetStatus {
@@ -21,7 +21,11 @@
     border: 1px solid green;
 }
 
+#Viewport {
+    width: 800px;
+    height: 400px;
+}
+
 #Content {
 
 }
-
