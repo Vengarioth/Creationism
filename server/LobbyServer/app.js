@@ -18,12 +18,17 @@ module.exports = new Class({
 
             var that = this;
 
-            user.socket.on('joinLobby', function(data) {
+            user.socket.on('setName', function(data) {
 
-            });
+                user.name = data.name;
 
-            user.socket.on('openLobby', function(data) {
-                that.openLobby(user);
+                user.socket.on('joinLobby', function(data) {
+                    that.lobbys[data.lobby].addUser(user);
+                });
+
+                user.socket.on('openLobby', function(data) {
+                    var lobby = that.openLobby(user);
+                });
             });
         }
     },
@@ -31,6 +36,8 @@ module.exports = new Class({
     openLobby: function(hostUser) {
         var lobby = new Lobby(this, hostUser);
         this.lobbys[hostUser.id] = lobby;
+
+        return lobby;
     },
 
     openGame: function(lobby) {
