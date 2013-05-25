@@ -1,14 +1,13 @@
 #################
-## Eclipse
+## Node.js
 #################
 
-node_modules
-.node_modules
-.node_modules/
-node_modules/
+server/node_modules/*
 
-.node_modules/*
 
+#################
+## Eclipse
+#################
 *.pydevproject
 .project
 .metadata
