@@ -10,6 +10,10 @@ Creationism.Service.Server = new Class({
         });
     },
 
+    on: function(key, callback) {
+        this.socket.on(key, callback);
+    },
+
     send: function(key, value) {
         this.socket.emit(key, value);
     }
