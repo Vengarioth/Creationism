@@ -32,6 +32,8 @@ var io = require('socket.io').listen(3001);
 var LobbyServer = require('./LobbyServer/app.js');
 var lobbyServer = new LobbyServer();
 io.sockets.on('connection', function (socket) {
-    lobbyServer.onConnect(socket);
-});
 
+    console.log(socket.id);
+    lobbyServer.onConnect(socket);
+
+});

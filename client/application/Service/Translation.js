@@ -11,7 +11,7 @@ Creationism.Service.Translation = new Class({
 
         this.loadLanguage(language, function(languagePack) {
             callback(function(key) {
-                return languagePack[key];
+                return typeof languagePack[key] === 'undefined' ? '{{' + key + '}}' : languagePack[key];
             })
         });
 
