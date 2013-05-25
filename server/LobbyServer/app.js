@@ -18,13 +18,13 @@ module.exports = new Class({
 
             var that = this;
 
-            user.name = user.id;
-
             //new GameServer([user]);
 
-            user.socket.on('setName', function(data) {
+            user.socket.on('setName', function(name) {
 
-                user.name = data.name;
+                user.name = name;
+
+                user.socket.emit('goTo', 'join');
 
                 user.socket.on('joinLobby', function(data) {
                     that.lobbys[data.lobby].addUser(user);

@@ -6,7 +6,8 @@ Creationism.Controller.Main = new Class({
         };
 
         scope.submit = function() {
-            console.log(model.name);
+            console.log('submit');
+            server.send('setName', model.name);
         };
 
         scope.model = model;
