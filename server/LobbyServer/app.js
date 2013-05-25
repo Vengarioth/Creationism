@@ -12,6 +12,8 @@ module.exports = new Class({
     },
 
     onConnect: function(socket) {
+        socket.emit('goTo', 'main');
+
         if(typeof this.user[socket.id] === 'undefined') {
             var user = new User(socket);
             this.user[user.id] = user;
