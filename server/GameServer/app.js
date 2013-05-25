@@ -9,17 +9,17 @@ module.exports = new Class({
         for (var i = 0; i<user_list.length; i++) {
             var player = new Player(user_list[i]);
             this.player_list[i] = player;
-            user_list[i].socket.on('inGame_set_choices', function(data) {
-                player.set_choices(data);
+            user_list[i].socket.on('inGame_setChoice', function(data) {
+                player.set_choice(data['type'], data['value']);
             });
         }
         var server = this;
+        last_time = new Date().getTime();
         setInterval(function() {server.update();}, 100);
     },
 
     update: function() {
-        var date = new Date();
-        var ms = date.getMilliseconds();
+        var ms = new Date().getTime();
         dt = ms - last_time;
         last_time = ms;
         for (var i = 0; i<this.player_list.length; i++) {

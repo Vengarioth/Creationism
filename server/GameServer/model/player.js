@@ -5,6 +5,7 @@ module.exports = new Class({
     user: null,
 
     choices: {
+        core: 0,
         religion: 0,
         government: 0
     },
@@ -30,12 +31,16 @@ module.exports = new Class({
         this.staticValues.water = Math.random();
     },
 
-    set_choices: function(new_choices) {
-        this.choices = new_choices;
+    set_choice: function(element, value) {
+        if (element=='coreElements') this.choices.core = value;
     },
 
     do_update: function(dt) {
-        this.dynamicValues.population *= 1 + this.dynamicValues.growth * GROWTH_FACTOR * dt;
+        var c = this.choices;
+        var d = this.dynamicValues;
+        if (c.core != 2) {
+            d.population *= 1 + d.growth * GROWTH_FACTOR * dt;
+        }
     }
 
 });
