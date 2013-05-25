@@ -5,8 +5,8 @@ Creationism.Game.Planet = new Class({
     growth: 1.001,
 
     //civilization
-    technology: 100,
-    pollution: 89,
+    technology: 0,
+    pollution: 0,
 
     //food & consumption
     food: 100,
@@ -38,7 +38,7 @@ Creationism.Game.Planet = new Class({
         var timeStep = 0.001 * timeDelta;
 
         //grow population
-        var newPopulation = (this.growth * timeStep);
+        var newPopulation = (this.growth * timeStep) * (1 - this.pollution * 0.01);
         if(this.food > newPopulation * 0.1 * timeStep) {
             this.population += newPopulation;
         }
