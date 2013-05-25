@@ -12,6 +12,22 @@ module.exports = new Class({
     },
 
     onConnect: function(socket) {
+        socket.on('request', function(request) {
+            console.log(request);
+
+            socket.emit('request_response', {
+                id: request.id,
+                data: {
+
+                }
+            });
+        });
+
+
+
+
+
+        return;
         socket.emit('goTo', 'main');
 
         if(typeof this.user[socket.id] === 'undefined') {
@@ -28,12 +44,23 @@ module.exports = new Class({
 
                 user.socket.emit('goTo', 'join');
 
+                user.socket.on('getLobbys', function(data) {
+                    var data = {};
+
+                    for(var i in that.lobbys) {
+                        data[i] = that.lobbys[i].getInfo();
+                    }
+
+                    user.socket.emit('lobbyData', data);
+                });
+
                 user.socket.on('joinLobby', function(data) {
                     that.lobbys[data.lobby].addUser(user);
                 });
 
-                user.socket.on('openLobby', function(data) {
+                user.socket.on('newLobby', function(data) {
                     var lobby = that.openLobby(user);
+                    that.lobbys[lobby.id] = lobby;
                 });
             });
 

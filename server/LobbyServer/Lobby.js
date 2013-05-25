@@ -1,5 +1,7 @@
 module.exports = new Class({
 
+    id: null,
+
     user: {},
     host: null,
     lobbyServer: null,
@@ -7,6 +9,7 @@ module.exports = new Class({
     initialize: function(lobbyServer, hostUser) {
         this.lobbyServer = lobbyServer;
         this.host = hostUser;
+        this.id = hostUser.id;
         this.addUser(hostUser);
 
         var that = this;
