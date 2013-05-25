@@ -18,6 +18,11 @@ module.exports = new Class({
 
             var that = this;
 
+            user.name = user.id;
+
+            new GameServer([user]);
+
+            /**
             user.socket.on('setName', function(data) {
 
                 user.name = data.name;
@@ -30,6 +35,7 @@ module.exports = new Class({
                     var lobby = that.openLobby(user);
                 });
             });
+             */
         }
     },
 
