@@ -1,4 +1,4 @@
-GROWTH_FACTOR = 1.0;
+GROWTH_FACTOR = 0.001;
 
 module.exports = new Class({
 
@@ -19,7 +19,7 @@ module.exports = new Class({
         stability: 0,
         happiness: 0,
         technology: 0,
-        growth: 0,
+        growth: 0.2,
         pollution: 0,
         energy: 0
     },
@@ -35,7 +35,7 @@ module.exports = new Class({
     },
 
     do_update: function(dt) {
-        this.dynamicValues.population *= this.dynamicValues.growth * GROWTH_FACTOR * dt;
+        this.dynamicValues.population *= 1 + this.dynamicValues.growth * GROWTH_FACTOR * dt;
     }
 
 });
