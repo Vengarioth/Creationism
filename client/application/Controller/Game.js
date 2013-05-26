@@ -24,7 +24,7 @@ Creationism.Controller.Game = new Class({
         asset.getImage('graphics/g_anarchy.png', function(htmlImage) {
             var image = new VCanvas.Image(htmlImage);
 
-            var sprite = new VCanvas.Sprite(1, 1, image);
+            var sprite = new VCanvas.Sprite(1,1, image);
             var animationNode = new VCanvas.Node.Drawable(sprite);
             var transformationNode = new VCanvas.Node.Transformation();
             transformationNode.addNode(animationNode);

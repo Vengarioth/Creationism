@@ -16,6 +16,7 @@ Creationism.Game.Planet = new Class({
     nature: 100,
     animals: 100,
     polution: 0,
+    happiness: 5,
 
 
     //state variablen
@@ -85,14 +86,68 @@ Creationism.Game.Planet = new Class({
                 this.food += foodGatherAmount;
                 this.pollution += timeStep;
 
+                break;
+        }
+
+        switch(this.choices['Governance']) {
+            case 'democracy':
+
+                break;
+            case 'dictatorship':
+
+                break;
+            case 'technocracy':
+
 
                 break;
         }
+
+        switch(this.choices['Religion']) {
+            case 'animals':
+
+                break;
+            case 'knowledge':
+
+                break;
+            case 'eye':
+
+
+                break;
+        }
+
+        switch(this.choices['Ideology']) {
+            case 'love':
+
+                break;
+            case 'communism':
+
+                break;
+            case 'ecology':
+
+
+                break;
+        }
+
+        switch(this.choices['Energy']) {
+            case 'renewable':
+
+                break;
+            case 'fossil':
+
+                break;
+            case 'nuclear':
+
+
+                break;
+        }
+
+
 
         //clear value
         if(this.pollution > 100) {
             this.pollution = 100;
         }
     }
+
 
 });

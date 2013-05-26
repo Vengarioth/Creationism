@@ -5,20 +5,22 @@
 #PlayerChoices {
     display: inline-block;
     float: left;
-    border: 1px solid red;
+
+    margin-left:10px;
 }
 
 #PlanetVisualization {
     display: block;
-    border: 1px solid blue;
-    margin-left: 400px;
+
+    margin-left: 450px;
     margin-right: 200px;
 }
 
 #PlanetStatus {
     display: inline-block;
     float: right;
-    border: 1px solid green;
+
+    margin-right:10px;
 }
 
 #Viewport {
